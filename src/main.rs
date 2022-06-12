@@ -7,7 +7,7 @@ mod milhar;
 use crate::cash::Cash;
 
 fn main() {
-    let numero = cash::Cash::from(9316.22);
+    let numero = cash::Cash::from(50316.22);
     println!("{}", show(&numero))
 }
 

@@ -23,18 +23,7 @@ impl Numero for Milhar {
         let milhar: String;
         let centena = self.rest.humanize();
 
-        match self.value {
-            1 => milhar = String::from("mil"),
-            2 => milhar = String::from("dois mil"),
-            3 => milhar = String::from("três mil"),
-            4 => milhar = String::from("quatro mil"),
-            5 => milhar = String::from("cinco mil"),
-            6 => milhar = String::from("seis mil"),
-            7 => milhar = String::from("sete mil"),
-            8 => milhar = String::from("oito mil"),
-            9 => milhar = String::from("nove mil"),
-            _ => milhar = String::from(""),
-        };
+        milhar = format!("{} mil", Centena::from(self.value).humanize());
 
         if self.value == 0 {
             return centena;
