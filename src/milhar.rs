@@ -40,7 +40,7 @@ impl Numero for Milhar {
             return centena;
         }
 
-        return format!("{} e {}", milhar, centena);
+        return format!("{} {}", milhar, centena);
     }
     fn token(&self) -> u32 {
         self.value
