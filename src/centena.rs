@@ -47,7 +47,7 @@ impl Numero for Centena {
             return dezena;
         }
 
-        if self.rest.is_zero() || self.value == 1 {
+        if self.rest.is_zero() && self.value == 1 {
             return centena;
         }
 
@@ -57,6 +57,6 @@ impl Numero for Centena {
         self.value
     }
     fn is_zero(&self) -> bool {
-        self.value == 0
+        self.value == 0 && self.rest.is_zero()
     }
 }

@@ -1,9 +1,11 @@
 
 use crate::number::Numero;
 
+#[derive(Debug)]
 pub struct Unidade {
     value: u32,
 }
+
 
 impl Unidade {
     pub fn from(value: u32) -> Unidade {
